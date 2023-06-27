@@ -1,5 +1,9 @@
 {
   "devDependencies": {
+    "drizzle-kit": "^0.19.2",
     "supabase": "^1.74.2"
+  },
+  "dependencies": {
+    "postgres": "^3.3.5"
   }
 }
