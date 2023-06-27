@@ -62,7 +62,7 @@ enable_confirmations = false
 # `discord`, `facebook`, `github`, `gitlab`, `google`, `keycloak`, `linkedin`, `notion`, `twitch`,
 # `twitter`, `slack`, `spotify`, `workos`, `zoom`.
 [auth.external.apple]
-enabled = false
+enabled = true
 client_id = ""
 secret = ""
 # Overrides the default auth redirectUrl.
@@ -72,11 +72,11 @@ redirect_uri = ""
 url = ""
 
 [analytics]
-enabled = false
+enabled = true
 port = 54327
 vector_port = 54328
 # Setup BigQuery project to enable log viewer on local development stack.
 # See: https://supabase.com/docs/guides/getting-started/local-development#enabling-local-logging
-gcp_project_id = ""
+gcp_project_id = "tjnagdjelhjyqalistir"
 gcp_project_number = ""
 gcp_jwt_path = "supabase/gcloud.json"
