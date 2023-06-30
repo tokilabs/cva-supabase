@@ -24,7 +24,7 @@ class SubscriptionUpdateInput {
   @Field(() => String, {
     nullable: true,
   })
-  email?: string;
+  email!: string;
 }
 
 export { SubscriptionUpdateInput as SubscriptionUpdateInput };

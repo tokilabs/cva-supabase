@@ -22,7 +22,7 @@ class Subscription {
   @IsDate()
   @Type(() => Date)
   @Field(() => Date)
-  createdAt!: Date;
+  createdAt?: Date;
 
   @ApiProperty({
     required: true,

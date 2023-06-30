@@ -1,15 +1,9 @@
-import * as common from "@nestjs/common";
-import * as swagger from "@nestjs/swagger";
 import * as nestAccessControl from "nest-access-control";
 import { SubscriptionService } from "./Subscription.service";
 import { SubscriptionControllerBase } from "./base/Subscription.controller.base";
-import { Post } from "@nestjs/common";
-import { Subscription } from "./base/Subscription";
-import { SubscriptionServiceBase } from "./base/Subscription.service.base"
-import { SubscriptionFindUniqueArgs } from "./base/SubscriptionFindUniqueArgs";
+import { Controller, Inject, Post } from "@nestjs/common";
 
-@swagger.ApiTags("subscriptions")
-@common.Controller("subscriptions")
+@Controller("Subscribe")
 export class SubscriptionController extends SubscriptionControllerBase {
   constructor(
     protected readonly service: SubscriptionService,
@@ -19,8 +13,12 @@ export class SubscriptionController extends SubscriptionControllerBase {
   }
 
   @Post("subscribeToWaitlist")
-  async submitForWaitingList(email: SubscriptionFindUniqueArgs){
-      this.service.subscribeToWaitlist(email)
+  async submitForWaitingList(email: string): Promise<unknown> {
+    try {
+      const subscribe = await this.service.Login(email);
+      return subscribe;
+    } catch (error) {
+      ("Could not continue the subscription process");
     }
   }
-
+}
