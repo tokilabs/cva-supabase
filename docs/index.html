@@ -57,8 +57,7 @@
     
             const email = form.elements.email.value;
     
-            const { data, error } = await supabase
-            .from("subscriptions")
+            const { data, error } = await supabase.channel("subscriptions")
             .insert([{ email }]);
     
             if (error) {
