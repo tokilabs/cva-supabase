@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Montserrat&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: #323232;
+    color: rgb(237, 102, 55); /* background: #C12906;    */
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1{
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+p{
+    font-size: 16px;
+    font-weight: bold;
+    line-height:30px;
+    font-variant: inherit;
+}
+
+
+#container {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background-image: url(img/Capacete.svg);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: auto, auto;
+}
+
+#logo {
+    box-sizing: border-box;
+    width: 300px;
+    height: 300px;
+    padding: 50px 0;
+    border-radius: 50%;
+    border: 3px solid rgba(255, 255, 255, 10%);
+    background-color: rgba(193, 41, 6, 10%);
+    text-align: center;
+    margin: 0 auto 20px;
+}
+
+#logo img {
+    height: 200px;
+    vertical-align: baseline;
+    margin: auto;
+}
+
+#container p, #container h1, #container h2 {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.link{
+    color: #18A0FB;
+    text-decoration: none;
+    font-size: 20px;
+}
+.mb-5{
+    margin-bottom: 10px;
+}
+
+.mt-15{
+    margin-top: 15px;
+}
+
+.ml-15{
+    margin-left: 15px;
+}
+
+.color{
+    color: rgb(193, 41, 6);
+    font-size: 22px;
+}
+
+/* --------------- form --------------- */
+
+.form {
+    text-align: center;
+}
+
+.form input{
+    border: 1px solid #9994;
+    border-radius: 30px;
+    min-height: 50px;
+    font-size: 12px;
+    padding: 10px 25px;
+    
+}
+
+.left{
+    width: 180px;
+    display: inline-flex;
+}
+  
+  /* --------------- btn --------------- */
+
+.btn {
+    padding: 12px 30px;
+    border-radius: 50rem;
+    background: #157efb;
+    -webkit-box-shadow: 0px 4px 0px 0px #9594B2;
+    box-shadow: 0px 4px 0px 0px #9594B2;
+    -webkit-filter: drop-shadow(0 13px 20px #07397235);
+    filter: drop-shadow(0 13px 20px #07397235);
+    color: #fff;
+    cursor: pointer;
+    font-family: inherit;
+    width: 186px;
+}
+
+.btn:focus,
+.btn:hover,
+.btn:not(:disabled):not(.disabled).active,
+.btn:not(:disabled):not(.disabled):active {
+  -webkit-transition: all 0.6s ease;
+  -moz-transition: all 0.6s ease;
+  -o-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+  outline: 0; 
+    background: #ED6637;
+    -webkit-box-shadow: 0px 4px 0px 0px #C12906;
+    box-shadow: 0px 4px 0px 0px #C12906;
+     
+}
