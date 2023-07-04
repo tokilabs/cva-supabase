@@ -30,51 +30,51 @@
             <p>
                 <a class="link" href="https://twitter.com/cvaforfigma">Follow on Twitter →</a><br>(DMs are always open)
             </p>
-            <form class="form" method="post" id="add-record-form">
+            <form class="form" id="waitlist-form">
                 <span class="color">Join the Waitlist</span>
                 <div class="row mb-5 mt-15">
                     <div class="text-center">
-                        <input type="text" name="email" class="form-control" placeholder="Subscribe with Email *" required>
+                        <input type="text" name="email" id="email" class="form-control" placeholder="Subscribe with Email *" required>
                     </div>
                     <div class="text-center mt-15">
                         <p>Make a wish <span class="text-sm color1">(optional)</span></p>
-                        <input type="text" name="message" class="form-control" placeholder="Make a wish">
+                        <input type="text" name="wish" id="wish" class="form-control" placeholder="Make a wish">
                     </div>
                     
                     <div class="text-center ml-15">
-                        <input type="submit" value="Request Access" class="btn">
+                        <input type="submit" onclick="registerUser()" value="Request Access" class="btn">
                     </div>
                 </div>
             </form>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
         <script>
-        const form = document.getElementById("add-record-form");
-        const supabase = createClient(
-            "https://tjnagdjelhjyqalistir.supabase.co",
-            "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRqbmFnZGplbGhqeXFhbGlzdGlyIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODc4ODI4MDMsImV4cCI6MjAwMzQ1ODgwM30.ZIOIYnlQNU7YJ6LetL3Q52lINa1LFlk2YoJedy5mC9c"
-            );
-        form.addEventListener("submit", async (event) => {
+          const supabaseUrl = 'https://tjnagdjelhjyqalistir.supabase.co';
+          const supabaseAnonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRqbmFnZGplbGhqeXFhbGlzdGlyIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTY4Nzg4MjgwMywiZXhwIjoyMDAzNDU4ODAzfQ.HWSbpNffLSFtGeN9XPxTPEyp6R1Poi8z4yBiHd2euB4';
+          const supabase = window.supabase.createClient(supabaseUrl, supabaseAnonKey);
+          const waitlistForm = document.getElementById('waitlist-form');
+
+          waitlistForm.addEventListener('submit', async (event) => {
             event.preventDefault();
-    
-            const email = form.elements.email.value;
-            
+
             const { data, error } = await supabase
-            .from("waitlist")
-            .insert([{ email }]);
-    
+              .from('waitlist')
+              .insert({
+                email: event.target.email.value,
+                wish: event.target.wish.value,
+              });
+
             if (error) {
-            console.error(error);
-            } else {
-            console.log(data);
-            alert(
-                "You have been submitted to try our CVA plugin. Please wait until we send you an email with credentials to have access (:"
-            );
-            
+              console.error(error);
+              return;
+            }else {
+              alert('User registered successfully!');
             }
 
-        });
-        </script>
+            console.log(data);
+          });
+        </script>       
+
     </body>
 </html>
 
