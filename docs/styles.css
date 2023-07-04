@@ -1,4 +1,56 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Montserrat&display=swap');
+@media (max-width: 400px) {
+    #container {
+        width: 350px;
+        margin: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    
+    #logo {
+        box-sizing: border-box;
+        width: 350px;
+        height: 250px;
+        background-image: url(img/LogoCVA.svg);
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-size: auto, auto;
+    }
+
+    h1{
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 19px;
+        color: rgb(237, 102, 55); /* background: #C12906;    */
+        padding-bottom: 15px;
+    }
+}
+@media (min-width: 405px) {
+    #logo {
+        box-sizing: border-box;
+        width: 500px;
+        height: 200px;
+        /*width: 300px;
+        height: 300px;
+        padding: 50px 0;
+        border-radius: 50%;
+        border: 3px solid rgba(255, 255, 255, 10%);
+        background-color: rgba(193, 41, 6, 10%);*/
+        text-align: center;
+        margin: 0 auto 20px;
+        background-image: url(img/LogoCVA.svg);
+            background-repeat: no-repeat;
+            background-position: 50%;
+            background-size: auto, auto;
+    }
+    
+    h1{
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 28px;
+        color: rgb(237, 102, 55); /* background: #C12906;    */
+        padding-bottom: 20px;
+    }
+}
 
 * {
     margin: 0;
@@ -11,10 +63,6 @@ html {
     font-family: 'Montserrat', sans-serif;
 }
 
-h1{
-    font-family: 'Josefin Sans', sans-serif;
-    color: rgb(237, 102, 55); /* background: #C12906;    */
-}
 
 p{
     font-size: 18px;
@@ -22,7 +70,6 @@ p{
     line-height:30px;
     color: #FFF;
 }
-
 
 #container {
   margin: 0;
@@ -35,25 +82,6 @@ p{
     background-repeat: no-repeat;
     background-position: 50%;
     background-size: auto, auto;
-}
-
-#logo {
-    box-sizing: border-box;
-    /*width: 300px;
-    height: 300px;
-    padding: 50px 0;
-    border-radius: 50%;
-    border: 3px solid rgba(255, 255, 255, 10%);
-    background-color: rgba(193, 41, 6, 10%);*/
-    text-align: center;
-    margin: 0 auto 20px;
-}
-
-#logo img {
-    width: 500px;
-    height: 200px;
-    vertical-align: baseline;
-    margin: auto;
 }
 
 #container p, #container h1, #container h2 {
@@ -74,6 +102,10 @@ p{
     margin-top: 15px;
 }
 
+.pt-15{
+    padding-top: 15px;
+}
+
 .ml-15{
     margin-left: 15px;
 }
@@ -87,11 +119,13 @@ p{
 
 .form {
     text-align: center;
+    padding-top: 15px;
 }
 
 .form input, .form textarea{
     width: 300px;
     border: 1px solid #9994;
+    background-color: rgba(255, 255 , 255, 10%);
     border-radius: 15px;
     min-height: 50px;
     font-size: 15px;
