@@ -1,17 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Montserrat&display=swap');
-@media (max-width: 400px) {
+@media (max-width: 500px){
     #container {
         width: 350px;
-        margin: 0;
         position: absolute;
         top: 0;
-        left: 0;
+        left: 50%;
+        transform: translate(-50%);
+        background-image: url(img/Capacete.svg);
+        background-repeat: no-repeat;
+        background-position: 50%;
+        background-size: auto, auto;
     }
     
     #logo {
-        box-sizing: border-box;
-        width: 350px;
-        height: 250px;
+        width: 250px;
+        height: 100px;
+        margin: auto;
         background-image: url(img/LogoCVA.svg);
         background-repeat: no-repeat;
         background-position: bottom;
@@ -20,36 +24,58 @@
 
     h1{
         font-family: 'Josefin Sans', sans-serif;
-        font-size: 19px;
+        font-size: 14px;
         color: rgb(237, 102, 55); /* background: #C12906;    */
-        padding-bottom: 15px;
+        padding: 15px 0 15px 0;
+        text-align: center;
     }
 }
-@media (min-width: 405px) {
-    #logo {
-        box-sizing: border-box;
+@media (min-width: 501px){
+    #container {
+        width: 500px;
+        margin: 0;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%);
+        background-image: url(img/Capacete.svg);
+        background-repeat: no-repeat;
+        background-position: 50%;
+        background-size: auto, auto;
+      }
+      
+      #logo {
         width: 500px;
         height: 200px;
-        /*width: 300px;
-        height: 300px;
-        padding: 50px 0;
-        border-radius: 50%;
-        border: 3px solid rgba(255, 255, 255, 10%);
-        background-color: rgba(193, 41, 6, 10%);*/
         text-align: center;
-        margin: 0 auto 20px;
+        margin: auto;
         background-image: url(img/LogoCVA.svg);
             background-repeat: no-repeat;
-            background-position: 50%;
+            background-position: bottom;
             background-size: auto, auto;
     }
     
     h1{
         font-family: 'Josefin Sans', sans-serif;
-        font-size: 28px;
+        font-size: 27px;
         color: rgb(237, 102, 55); /* background: #C12906;    */
-        padding-bottom: 20px;
+        padding: 20px 0 20px 0;
+        text-align: center;
     }
+}
+@media (min-height: 960px){
+    #container {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      
+        background-image: url(img/Capacete.svg);
+          background-repeat: no-repeat;
+          background-position: 50%;
+          background-size: auto, auto;
+      }
 }
 
 * {
@@ -63,7 +89,6 @@ html {
     font-family: 'Montserrat', sans-serif;
 }
 
-
 p{
     font-size: 18px;
     font-weight: bold;
@@ -71,20 +96,7 @@ p{
     color: #FFF;
 }
 
-#container {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
-  background-image: url(img/Capacete.svg);
-    background-repeat: no-repeat;
-    background-position: 50%;
-    background-size: auto, auto;
-}
-
-#container p, #container h1, #container h2 {
+#container p {
     margin-top: 20px;
     text-align: center;
 }
@@ -94,32 +106,26 @@ p{
     text-decoration: none;
     font-size: 20px;
 }
-.mb-5{
-    margin-bottom: 10px;
-}
 
-.mt-15{
-    margin-top: 15px;
-}
-
-.pt-15{
-    padding-top: 15px;
-}
-
-.ml-15{
-    margin-left: 15px;
-}
+.mb-5{margin-bottom: 10px;}
+.mt-15{margin-top: 15px;}
+.pt-15{padding-top: 15px;}
+.ml-15{margin-left: 15px;}
+.text-sm{font-size: 11px;}
 
 .color{
-    color: rgb(193, 41, 6);
+    color: #ED6637;
     font-size: 22px;
 }
+.color1{color: #a7a7a7;}
 
 /* --------------- form --------------- */
 
 .form {
+    width: 350px;
     text-align: center;
-    padding-top: 15px;
+    margin: 20px auto;
+    padding: 10px;
 }
 
 .form input, .form textarea{
