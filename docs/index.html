@@ -62,14 +62,13 @@
             const email = form.elements.email.value;
             
             const { data, error } = await supabase
-            .from("subscriptions")
+            .from("waitlist")
             .insert([{ email }]);
     
             if (error) {
             console.error(error);
             } else {
             console.log(data);
-            supabase()
             alert(
                 "You have been submitted to try our CVA plugin. Please wait until we send you an email with credentials to have access (:"
             );
